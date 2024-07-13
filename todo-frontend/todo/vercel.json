@@ -1,20 +1,21 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "index.html",
-        "use": "@vercel/static-build",
-        "config": {}
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/todos",
-        "dest": "http://localhost:3000/todos"
-      },
-      {
-        "src": "/api/todos/:id",
-        "dest": "http://localhost:3000/todos/:id"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static-build",
+      "config": {},
+      "dest": "public"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/todos",
+      "dest": "https://your-api-url.com/todos"
+    },
+    {
+      "src": "/api/todos/:id",
+      "dest": "https://your-api-url.com/todos/:id"
+    }
+  ]
+}
