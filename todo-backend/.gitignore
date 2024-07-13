@@ -1,0 +1,7 @@
+# Ignore the.env file
+.env
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore any other files or folders you don't want to commit

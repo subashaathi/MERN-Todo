@@ -1,7 +1,9 @@
+//mongodb://localhost:27017/mern-app
 //Express - npm install express
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+require('dotenv').config(); 
 
 //create an instense of express
 const app = express();
@@ -12,7 +14,7 @@ app.use(cors());
 //let todos = [];
 
 //connecting mongodb
-mongoose.connect('mongodb+srv://subashaathi:dHvxSGbdKVUiKoeE@mern-app.qz5ikum.mongodb.net/?retryWrites=true&w=majority&appName=MERN-APP')
+mongoose.connect(process.env.MONGODB_URI)
 //
 .then(() => {
     console.log('MongoDB Connected...')
@@ -111,7 +113,7 @@ app.put('/todos/:id',async(req,res) => {
 
 
 //start the server
-const port =3000;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`server started on port ${port}`)
 })
