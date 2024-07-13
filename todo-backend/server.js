@@ -12,7 +12,8 @@ app.use(cors());
 //let todos = [];
 
 //connecting mongodb
-mongoose.connect('mongodb://localhost:27017/mern-app')
+mongoose.connect('mongodb+srv://subashaathi:dHvxSGbdKVUiKoeE@mern-app.qz5ikum.mongodb.net/?retryWrites=true&w=majority&appName=MERN-APP')
+//
 .then(() => {
     console.log('MongoDB Connected...')
 })
