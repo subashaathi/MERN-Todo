@@ -7,7 +7,7 @@ function Todo() {
   const [error, setError] = useState("");
   const [todos, setTodos] = useState([]);
   const [editing, setEditing] = useState(null);
-  const apiUrl = "http://localhost:3000";
+  const apiUrl = "https://mern-todo-e4xx.onrender.com";
 
   useEffect(() => {
     fetch(apiUrl + "/todos")
