@@ -1,21 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static-build",
-      "config": {},
-      "dest": "public"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/todos",
-      "dest": "https://your-api-url.com/todos"
-    },
-    {
-      "src": "/api/todos/:id",
-      "dest": "https://your-api-url.com/todos/:id"
-    }
+  "rewrites":[
+    {"source":"/(.*)","destination":"/"}
   ]
 }
